@@ -21,7 +21,7 @@ public class Coche {
         this.marca = marca;
         this.modelo = modelo;
         precioDeAveria = 0;
-        motor = new Motor(500);
+        motor = new Motor(480);
     }
 
     public Motor getMotor() {
