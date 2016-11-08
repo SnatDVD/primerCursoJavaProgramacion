@@ -40,7 +40,5 @@ public class Taller {
     
     public void devolvercoche(){
         atendido = false;
-    }
-  
-    
+    }  
 }
