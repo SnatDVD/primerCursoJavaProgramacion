@@ -22,7 +22,7 @@ public class Taller {
             atendido = true;
             numeroCoches++;
             
-            if (averia == "aceite"){
+            if ("aceite".equals(averia)){
                 coche.getMotor().setLitrosAceite(coche.getMotor().getLitrosAceite()+10);
             }
             return true;
