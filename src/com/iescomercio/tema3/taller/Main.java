@@ -28,10 +28,5 @@ public class Main {
         coche2.verCoche();
         System.out.println(" ** Numero de coches que han visitado el taller: " + taller1.getNumeroCoches());
         taller1.aceptarCoche(coche3, "averia");
-        
-        
-        
- 
-
     }
 }    
