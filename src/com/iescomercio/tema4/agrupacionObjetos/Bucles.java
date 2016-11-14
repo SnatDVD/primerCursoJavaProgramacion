@@ -12,7 +12,7 @@ package com.iescomercio.tema4.agrupacionObjetos;
 public class Bucles {
     
     public void ejercicio1(int num){
-        int aux = 0;
+        int aux = 1;
         while(num > aux){
             System.out.println(aux);
             aux++;
@@ -20,6 +20,6 @@ public class Bucles {
     }
     
     public void ejercio2(){
-        
+
     }
 }

@@ -15,6 +15,7 @@ public class Notebook {
 
     // Storage for an arbitrary number of notes.
     private ArrayList<String> notes;
+    private ArrayList<String> agenda;
 
     /**
      * Perform any initialization that is required for the notebook.
@@ -64,5 +65,20 @@ public class Notebook {
             System.out.println("El numero es demasiado grande.");
         }
 
+    }
+    
+    public void printNotas(){
+        for(String note:notes){
+            System.out.println(note);
+        }
+    }
+    
+    public void imprimirNotas(){
+        int contador = 0;
+        int cantidad = numberOfNotes();
+        do{
+            System.out.println(notes.get(contador));
+            contador++;
+        }while(contador<cantidad);
     }
 }
