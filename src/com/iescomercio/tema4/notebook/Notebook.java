@@ -81,4 +81,14 @@ public class Notebook {
             contador++;
         }while(contador<cantidad);
     }
+    
+    public void sumar(int min, int max){
+        int acum = 0;
+        int contador = min;
+        while(contador<=max){
+            acum = acum + contador;
+            contador++;
+        }
+        System.out.println(acum);
+    }
 }

@@ -22,4 +22,25 @@ public class Bucles {
     public void ejercio2(){
 
     }
+    
+    
+    public void sumar(int min, int max){
+        int acum = 0;
+        int contador = min;
+        while(contador<=max){
+            acum = acum + contador;
+            contador++;
+        }
+        System.out.println(acum);
+    }
+    
+    public boolean esPrimo(int numero) {
+        int contador = 0;
+        for (int i = 2; i <= numero; i++) {
+            if (numero % i == 0) {
+                contador++;
+            }
+        }
+        return contador == 1;
+    }
 }

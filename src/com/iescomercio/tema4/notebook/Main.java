@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.iescomercio.tema4.agrupacionObjetos;
+package com.iescomercio.tema4.notebook;
 
 /**
  *
@@ -11,10 +11,7 @@ package com.iescomercio.tema4.agrupacionObjetos;
  */
 public class Main {
     public static void main(String[] args) {
-        Bucles b1 = new Bucles();
+        Notebook n1 = new Notebook();
         
-        //b1.ejercicio1(50);
-        //b1.sumar(1, 4);
-        System.out.println(b1.esPrimo(564));
     }
 }
