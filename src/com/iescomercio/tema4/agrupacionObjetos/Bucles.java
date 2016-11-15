@@ -43,4 +43,14 @@ public class Bucles {
         }
         return contador == 1;
     }
+    
+    public boolean esPerfecto(int numero) {
+        int suma = 0;
+        for (int i = 1; i < numero; i++) {
+            if (numero % (i % numero) == 0) {
+                suma = suma + (i % numero);
+            }
+        }
+        return suma == numero;
+    }
 }
