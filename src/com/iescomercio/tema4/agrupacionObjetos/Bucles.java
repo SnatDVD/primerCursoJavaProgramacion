@@ -10,30 +10,29 @@ package com.iescomercio.tema4.agrupacionObjetos;
  * @author chiqui
  */
 public class Bucles {
-    
-    public void ejercicio1(int num){
+
+    public void ejercicio1(int num) {
         int aux = 1;
-        while(num > aux){
+        while (num > aux) {
             System.out.println(aux);
             aux++;
         }
     }
-    
-    public void ejercio2(){
+
+    public void ejercio2() {
 
     }
-    
-    
-    public void sumar(int min, int max){
+
+    public void sumar(int min, int max) {
         int acum = 0;
         int contador = min;
-        while(contador<=max){
+        while (contador <= max) {
             acum = acum + contador;
             contador++;
         }
         System.out.println(acum);
     }
-    
+
     public boolean esPrimo(int numero) {
         int contador = 0;
         for (int i = 2; i <= numero; i++) {
@@ -43,7 +42,7 @@ public class Bucles {
         }
         return contador == 1;
     }
-    
+
     public boolean esPerfecto(int numero) {
         int suma = 0;
         for (int i = 1; i < numero; i++) {
@@ -53,4 +52,4 @@ public class Bucles {
         }
         return suma == numero;
     }
-}
+}    

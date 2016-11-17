@@ -15,7 +15,6 @@ public class Notebook {
 
     // Storage for an arbitrary number of notes.
     private ArrayList<String> notes;
-    private ArrayList<String> agenda;
 
     /**
      * Perform any initialization that is required for the notebook.
@@ -46,49 +45,72 @@ public class Notebook {
      * @param noteNumber The number of the note to be shown.
      */
     public void showNote(int noteNumber) {
-        if (noteNumber < 0) {
+        int noteNumber1 = (noteNumber -1);
+        if (noteNumber1 < 0) {
             // This is not a valid note number, so do nothing.
-        } else if (noteNumber < numberOfNotes()) {
+        } else if (noteNumber1 < numberOfNotes()) {
             // This is a valid note number, so we can print it.
-            System.out.println(notes.get(noteNumber));
+            System.out.println(notes.get(noteNumber1));
         } else {
             // This is not a valid note number, so do nothing.
         }
     }
 
     public void eliminarNotas(int noteNumber) {
-        if (noteNumber < 0) {
+        int noteNumber1 = (noteNumber - 1);
+        if (noteNumber1 < 0) {
             System.out.println("No se puede poner numero negativos.");
-        } else if (noteNumber < numberOfNotes()) {
-            notes.remove(noteNumber);
-        }else{
+        } else if (noteNumber1 < numberOfNotes()) {
+            notes.remove(noteNumber1);
+        } else {
             System.out.println("El numero es demasiado grande.");
         }
 
     }
-    
-    public void printNotas(){
-        for(String note:notes){
+
+    public void printNotas() {
+        for (String note : notes) {
             System.out.println(note);
         }
     }
-    
-    public void imprimirNotas(){
+
+    public void imprimirNotas() {
         int contador = 0;
+        int indiceArray = 0;
         int cantidad = numberOfNotes();
-        do{
-            System.out.println(notes.get(contador));
+        do {
+            System.out.println(indiceArray + ": " + notes.get(contador));
             contador++;
-        }while(contador<cantidad);
+            indiceArray++;
+        } while (contador < cantidad);
     }
-    
-    public void sumar(int min, int max){
+
+    public void sumar(int min, int max) {
         int acum = 0;
         int contador = min;
-        while(contador<=max){
+        while (contador <= max) {
             acum = acum + contador;
             contador++;
         }
         System.out.println(acum);
+    }
+
+    public void buscar(String cadABuscar) {
+        int indice = 0;
+        boolean encontrado = false;
+        int tamañoNotas = notes.size();
+        while (indice < tamañoNotas && !encontrado) {
+            String nota = notes.get(indice);
+            if (nota.contains(cadABuscar)) {
+                encontrado = true;
+            } else {
+                indice++;
+            }
+        }
+        if(encontrado)
+            System.out.println("La nota se a encontrado: " + cadABuscar);
+        else
+            System.out.println("No se a encontrado el elemento buscado: " + cadABuscar);
+
     }
 }

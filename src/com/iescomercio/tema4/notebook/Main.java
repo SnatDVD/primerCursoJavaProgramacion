@@ -13,5 +13,10 @@ public class Main {
     public static void main(String[] args) {
         Notebook n1 = new Notebook();
         
+        n1.storeNote("TANIA");
+        n1.storeNote("DAVID hola");
+        n1.buscar("DAVID hola");
+        n1.imprimirNotas();
+        
     }
 }
