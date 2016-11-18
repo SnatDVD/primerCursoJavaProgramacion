@@ -55,7 +55,45 @@ public class Numero {
         }
     }
     
-    public void sumaCifras(){
+    public int sumaCifras(){
+
+        int acum = 0;
+        int numero = valor;
+   
+        while(numero > 0){
+            acum = acum + numero%10;
+            numero = numero/10;
+        }
+        return acum;
+    }
+    
+    public int numDivisores(){
+        int acum = 0;
+        int cont = 1;
         
+        while(cont <= valor){
+            if(valor%cont == 0){
+                acum++;
+            }
+            cont++;
+        }
+        return acum;
+    }
+    
+    public String base2(){
+        String cadena = "";
+        int numero = valor;
+        
+        while(numero >=2){
+            if(numero%2 == 0){
+                cadena = 0 + cadena;
+            }else if(numero%2 == 1){
+                cadena = 1 + cadena;
+            }
+            
+            numero = numero/2;  
+        }
+        cadena = numero + cadena;
+        return cadena;
     }
 }

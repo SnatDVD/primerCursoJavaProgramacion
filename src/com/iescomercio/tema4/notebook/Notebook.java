@@ -45,7 +45,7 @@ public class Notebook {
      * @param noteNumber The number of the note to be shown.
      */
     public void showNote(int noteNumber) {
-        int noteNumber1 = (noteNumber -1);
+        int noteNumber1 = noteNumber--;
         if (noteNumber1 < 0) {
             // This is not a valid note number, so do nothing.
         } else if (noteNumber1 < numberOfNotes()) {
@@ -57,7 +57,7 @@ public class Notebook {
     }
 
     public void eliminarNotas(int noteNumber) {
-        int noteNumber1 = (noteNumber - 1);
+        int noteNumber1 = noteNumber--;
         if (noteNumber1 < 0) {
             System.out.println("No se puede poner numero negativos.");
         } else if (noteNumber1 < numberOfNotes()) {

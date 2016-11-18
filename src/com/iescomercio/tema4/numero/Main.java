@@ -11,10 +11,13 @@ package com.iescomercio.tema4.numero;
  */
 public class Main {
     public static void main(String[] args) {
-        Numero n1 = new Numero(100);
+        Numero n1 = new Numero(19);
         
         //n1.listaPerfectos();
         //n1.listaNumeros();
+        //System.out.println(n1.sumaCifras());
+        //System.out.println(n1.numDivisores());
+        //System.out.println(n1.base2());
     }
     
 }
