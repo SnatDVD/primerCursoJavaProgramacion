@@ -6,6 +6,7 @@
 package com.iescomercio.tema4.notebook;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -107,10 +108,49 @@ public class Notebook {
                 indice++;
             }
         }
-        if(encontrado)
+        if (encontrado) {
             System.out.println("La nota se a encontrado: " + cadABuscar);
-        else
+        } else {
             System.out.println("No se a encontrado el elemento buscado: " + cadABuscar);
+        }
 
     }
-}
+
+    /*
+    * Haciendo uso de la clase iterator realiza un bucle que muestre de la 
+    * coleccion notes, aquellas notas de la agenda que tengan mas de 10 
+    * caracteres. Y si hay mas de 4 notas con 10 caracteres terminaremos el bucle.
+     */
+    public void itBucle() {
+        Iterator<String> it = notes.iterator();
+        int contador = 0;
+        String s;
+        while(it.hasNext() && contador < 4){
+            s = it.next();
+            if(s.length() > 10){
+                System.out.println(s);
+                contador++;
+            }           
+        }
+    }
+    
+    public void buscarBorrarWhileIndice(String buscarBorrar){
+        int indice = 0;
+        boolean encontrado = false;
+        int tamañoNotas = notes.size();
+        while (indice < tamañoNotas && !encontrado) {
+            String nota = notes.get(indice);
+            if (nota.contains(buscarBorrar)) {
+                encontrado = true;
+            } else {
+                indice++;
+            }
+        }
+        if (encontrado) {
+            System.out.println("La nota " + buscarBorrar + " se ha borrado");
+            notes.remove(buscarBorrar);
+        } else {
+            System.out.println("No se a encontrado el elemento buscado: " + buscarBorrar);
+        }
+    }
+}    

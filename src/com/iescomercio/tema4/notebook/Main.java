@@ -13,10 +13,12 @@ public class Main {
     public static void main(String[] args) {
         Notebook n1 = new Notebook();
         
-        n1.storeNote("TANIA");
-        n1.storeNote("DAVID hola");
-        n1.buscar("DAVID hola");
-        n1.imprimirNotas();
+        n1.storeNote("PEPITO GRILLO");
+        n1.storeNote("BLANCANIEVES");
+        n1.storeNote("LOBO");
+        n1.storeNote("CRISTIANO");
+        n1.storeNote("01234");
+        
         
     }
 }
