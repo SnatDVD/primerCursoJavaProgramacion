@@ -44,6 +44,10 @@ public class Socio {
         return mes;
     }
 
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
     /**
      * @return The year in which the member joined.
      */
@@ -56,7 +60,7 @@ public class Socio {
      */
     @Override
     public String toString() {
-        return "Nombre: " + nombre
+        return nombre
                 + " asociado en:  "
                 + mes + " de " + año;
     }

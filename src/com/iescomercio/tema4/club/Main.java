@@ -22,7 +22,7 @@ public class Main {
         Socio socio7 = new Socio("Miguel", 7, 1993);
         Socio socio8 = new Socio("Chiqui", 9, 1994);
         Socio socio9 = new Socio("Asier", 9, 2016);
-        Socio socio10 = new Socio("Antonio", 9, 2016);
+        Socio socio10 = new Socio("Antonio", 12, 2016);
         
         Club club1 = new Club();
         
@@ -36,12 +36,10 @@ public class Main {
         club1.asociar(socio8);
         club1.asociar(socio9);
         club1.asociar(socio10);
+
+        ArrayList<Socio> a = club1.cambiarMes();
         
-        ArrayList<Socio> s = club1.purgar(9);
-        
-        System.out.println(s);
-        
-        club1.listarMiembros();
+        System.out.println(a);
 
         
         
