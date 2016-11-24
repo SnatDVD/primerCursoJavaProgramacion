@@ -73,22 +73,35 @@ public class Club {
         return listaPurgar;
     }
 
-    public ArrayList<Socio> añadirMujeres() {
+    public void añadirMujeres() {
         ArrayList<Socio> listaConMujeres = new ArrayList<Socio>();
-        Iterator<Socio> it = socios.iterator();
-        int contadorMujeres = 0;
         Socio aux;
-        while (it.hasNext()) {
-            aux = it.next();
-            if ( socios.size()> contadorMujeres) {
+        
+        for(Socio s:socios){
+            if(!s.getNombre().contains("Mujer de ") ){
+                aux = new Socio("Mujer de " + s.getNombre(), s.getMes(), s.getAño());
                 listaConMujeres.add(aux);
-                System.out.println("Mujer de " + aux);
-                contadorMujeres++;
-
-            } 
+            }
         }
-        return socios;
-    }
+        socios.addAll(listaConMujeres);
+    }    
+    
+//        Iterator<Socio> it = socios.iterator();
+//        int contadorMujeres = 0;
+//        
+//        while (it.hasNext()) {
+//            aux = it.next();
+//            if ( socios.size()> contadorMujeres) {
+//                listaConMujeres.add(aux);
+//                System.out.println("Mujer de " + aux);
+//                if(!aux.getNombre().contains("Mujer de") )
+//                    asociar(new Socio("Mujer de" + aux.getNombre(), aux.getMes(), aux.getAño()));
+//                contadorMujeres++;
+//
+//            } 
+//        }
+//        return socios;
+//    }
     
     public ArrayList<Socio> sociosMes(int mes){
         ArrayList<Socio> sociosMes = new ArrayList<Socio>();
@@ -101,6 +114,18 @@ public class Club {
                 sociosMes.add(aux);
         }
         return sociosMes;
+    }
+    
+    public void socioMes2(int mes){
+        Iterator<Socio> it = socios.iterator();
+        Socio aux;
+        
+        while(it.hasNext()){
+            aux = it.next();
+            if(aux.getMes() == mes){
+                System.out.println(aux);
+            }
+        }
     }
     
     public boolean estaSocio(String nombre){
@@ -118,29 +143,20 @@ public class Club {
         return encontrado;
     }
     
-    public ArrayList<Socio> cambiarMes(){
+    public void cambiarMes(){
         ArrayList<Socio> cambiarMes = new ArrayList<Socio>();
-        Iterator<Socio> it = socios.iterator();
         Socio aux;
         
-        while(it.hasNext()){
-            aux = it.next();
-            int mesActual = aux.getMes();
-            int contador = 0;
+        for(Socio s:socios){
+            int mesActual = s.getMes();
             
-            if(mesActual>0 && mesActual<12){
-                mesActual++;
-                contador = contador + mesActual;
-                aux.setMes(contador);
-                cambiarMes.add(aux);
-            }else if(mesActual == 12){
-                mesActual = 1;
-                contador = contador + mesActual;
-                aux.setMes(contador);
-                cambiarMes.add(aux);
+            if(mesActual<12){
+                s.setMes(s.getMes() + 1);
+                cambiarMes.add(s);
+            }else{
+                s.setMes(1);
+               
             }
- 
         }
-        return cambiarMes;
-    }
+    }    
 }    

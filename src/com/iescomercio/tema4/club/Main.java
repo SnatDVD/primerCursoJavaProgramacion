@@ -37,11 +37,7 @@ public class Main {
         club1.asociar(socio9);
         club1.asociar(socio10);
 
-        ArrayList<Socio> a = club1.cambiarMes();
-        
-        System.out.println(a);
-
-        
+        club1.socioMes2(9);
         
         
         
