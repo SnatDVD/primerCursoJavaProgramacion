@@ -28,6 +28,18 @@ public class Socio {
         this.mes = mes;
         this.año = año;
     }
+    
+    public int trimestre(){
+        if (mes < 4){
+            return 1;
+        } else if (mes < 7){
+            return 2;
+        } else if (mes < 10){
+            return 3;
+        } else {
+            return 4;
+        }
+    }
 
     /**
      * @return The member's name.

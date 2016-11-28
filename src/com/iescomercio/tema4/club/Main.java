@@ -37,8 +37,7 @@ public class Main {
         club1.asociar(socio9);
         club1.asociar(socio10);
 
-        club1.socioMes2(9);
-        
+        System.out.println(club1.nombreMasLargoTodos());
         
         
     }
